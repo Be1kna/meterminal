@@ -33,7 +33,7 @@ off
 
 Десятичные дроби через запятую\
 E-нотация\
-+ - * / ^ % !\
+{ + - * / ^ % ! }\
 pi, пи, π, e, е, ans\
 sqrt, cbrt, abs, sin, cos, tan, asin, acos, atan sinh, cosh, tanh, ln, log, log10, exp, floor, ceil, round, fact, pow, min, max\
 mod, ;-separated args, ( )
