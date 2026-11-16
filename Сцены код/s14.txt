@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.MI_CORE;e&&document.addEventListener("mi:unlock",(s=>{const t=s.detail||{},n=t.data||{};"s14"!==t.scene||"string"!=typeof n.message||e.busy()||(e.miRememberAction(),e.say(n.message))}))})();

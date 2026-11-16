@@ -1,0 +1,517 @@
+====================================================================
+АРХИВ ВСЕХ ФРАГМЕНТОВ КОДА И ШИФРОВ, ОТПРАВЛЕННЫХ В ДИАЛОГЕ
+====================================================================
+
+--------------------------------------------------------------------
+1. ИСХОДНЫЙ JAVASCRIPT-КОД ТЕРМИНАЛА (М.И.)
+--------------------------------------------------------------------
+}(n),
+                            Ot = !0,
+                            Ut(),
+                            Vt.focus({
+                                preventScroll: !0
+                            })
+                        }
+                        return
+                    }
+                    if (p || m || ht || Je || Ze)
+                        return;
+                    if (zt && Qt(),
+                    !a)
+                        return kt(),
+                        void $e();
+                    x && mt();
+                    const r = await (window.MI_SECURITY?.event("command", a));
+                    if (!r?.ok) {
+                        if (!b && (i = o,
+                        Mt.has(vt(i))))
+                            return ve(),
+                            void pt(function() {
+                                let e = Math.floor(Math.random() * gt.length);
+                                return e === xt && (e = (e + 1 + Math.floor(Math.random() * (gt.length - 1))) % gt.length),
+                                xt = e,
+                                gt[e]
+                            }());
+                        var i;
+                        if (!b && function(e) {
+                            const t = e.trim().replace(/^=/, "").trim();
+                            return !!t && !!/^(?:[+\-.(\d,π√∛]|pi(?:|\s*\()|ans(?:|\s*\()|e(?:|\s*\()|sin|cos|tan|asin|acos|atan|sinh|cosh|tanh|sqrt|cbrt|log|log10|ln|abs|exp|pow|fact|factorial|floor|ceil|round|min|max|корень|модуль|п|пи|е)/i.test(t) && /^[\da-zа-яёπ√∛+\-*/×÷·^%!.,;():\s]+$/i.test(t)
+                        }(o))
+                            return ve(),
+                            void function(e) {
+                                mt();
+                                try {
+                                    const t = qt(e);
+                                    At = t,
+                                    Rt(e, function(e) {
+                                        if (Object.is(e, -0) && (e = 0),
+                                        !Number.isFinite(e))
+                                            return "ОШИБКА";
+                                        if (Math.abs(e) > 1e13 || 0 !== e && Math.abs(e) < 1e-8)
+                                            return e.toExponential(8).replace(".", ",");
+                                        const t = Number(e.toPrecision(12));
+                                        return String(t).replace(".", ",")
+                                    }(t))
+                                } catch (t) {
+                                    Rt(e, t instanceof Error ? t.message : "ОШИБКА", !0)
+                                }
+                            }(o.trim());
+                        kt(),
+                        $e()
+                    }
+                }
+                document.addEventListener("mi:unlock", function(o) {
+                    const r = o.detail || {}
+                      , i = r.scene
+                      , v = r.data || {};
+                    if ("s01" !== i && "s02" !== i && "s03" !== i && "s04" !== i && !(p || ht || Je || Ze)) {
+                        if ((v.ui || "s06" === i) && ($t[i] = {
+                            ...v.ui,
+                            shapes: v.shapes,
+                            cap: v.cap,
+                            rim: v.rim
+                        }),
+                        "s14" === i && "string" == typeof v.message)
+                            return ve(),
+                            void pt(v.message);
+                        if ("s05" === i && !b)
+                            return ve(),
+                            jt = "string" == typeof v.message ? v.message : "",
+                            Ht.setAttribute("aria-label", v.ui?.label || ""),
+                            zt = !0,
+                            Xt = 0,
+                            Ht.hidden = !1,
+                            document.body.classList.add("u26"),
+                            x && mt(),
+                            kt(),
+                            a.hidden = !0,
+                            n.value = "",
+                            _t(),
+                            Kt(),
+                            void n.focus({
+                                preventScroll: !0
+                            });
+                        if ("s06" === i && !b)
+                            return ve(),
+                            x && mt(),
+                            kt(),
+                            s = !0,
+                            u = "smile",
+                            d = 0,
+                            h = 0,
+                            f = !1,
+                            g = performance.now() + 2400,
+                            w = performance.now(),
+                            n.value = "",
+                            J(),
+                            void n.focus({
+                                preventScroll: !0
+                            });
+                        if ("s07" === i)
+                            return ve(),
+                            void (b ? (n.value = "",
+                            $()) : pt("Приветствую вас, пользователь"));
+                        if ("s08" === i && !b)
+                            return ve(),
+                            kt(),
+                            void (Je || Ze || b || m || p || ht || (Je = !0,
+                            Ue(),
+                            n.value = "",
+                            n.blur(),
+                            x && mt(),
+                            et = performance.now(),
+                            lt = 0,
+                            document.body.classList.add("u19"),
+                            function() {
+                                try {
+                                    const e = window.AudioContext || window.webkitAudioContext;
+                                    if (!e)
+                                        return;
+                                    const t = new e;
+                                    t.resume().catch( () => {}
+                                    );
+                                    const n = t.createGain();
+                                    n.gain.setValueAtTime(.007, t.currentTime),
+                                    n.gain.exponentialRampToValueAtTime(.19, t.currentTime + 4.85),
+                                    n.connect(t.destination);
+                                    const o = t.createDynamicsCompressor();
+                                    o.threshold.value = -18,
+                                    o.ratio.value = 5,
+                                    o.attack.value = .006,
+                                    o.release.value = .18,
+                                    o.connect(n);
+                                    const a = t.createBuffer(1, 2 * t.sampleRate, t.sampleRate)
+                                      , r = a.getChannelData(0);
+                                    for (let e = 0; e < r.length; e++)
+                                        r[e] = 2 * Math.random() - 1;
+                                    const i = t.createBufferSource();
+                                    i.buffer = a,
+                                    i.loop = !0;
+                                    const c = t.createBiquadFilter();
+                                    c.type = "bandpass",
+                                    c.frequency.value = 660,
+                                    c.Q.value = .4;
+                                    const l = t.createBiquadFilter();
+                                    l.type = "highpass",
+                                    l.frequency.value = 1500;
+                                    const s = t.createGain();
+                                    s.gain.value = .66;
+                                    const u = t.createGain();
+                                    u.gain.value = .3,
+                                    i.connect(c),
+                                    c.connect(s),
+                                    s.connect(o),
+                                    i.connect(l),
+                                    l.connect(u),
+                                    u.connect(o),
+                                    c.frequency.setValueAtTime(450, t.currentTime),
+                                    c.frequency.exponentialRampToValueAtTime(1600, t.currentTime + 4.8),
+                                    i.start();
+                                    const d = t.createOscillator()
+                                      , h = t.createGain();
+                                    d.type = "sawtooth",
+                                    d.frequency.setValueAtTime(45, t.currentTime),
+                                    d.frequency.exponentialRampToValueAtTime(150, t.currentTime + 4.7),
+                                    h.gain.value = .036,
+                                    d.connect(h),
+                                    h.connect(o),
+                                    d.start();
+                                    const f = t.createOscillator()
+                                      , m = t.createGain();
+                                    f.type = "sine",
+                                    f.frequency.value = 7,
+                                    m.gain.value = 170,
+                                    f.connect(m),
+                                    m.connect(c.frequency),
+                                    f.start();
+                                    const p = window.setInterval( () => {
+                                        if (!Je || Ze || "closed" === t.state)
+                                            return;
+                                        const e = st((performance.now() - et) / 5e3);
+                                        if (Math.random() > .21 + .71 * e)
+                                            return;
+                                        const n = t.createBuffer(1, Math.ceil(.034 * t.sampleRate), t.sampleRate)
+                                          , a = n.getChannelData(0);
+                                        for (let e = 0; e < a.length; e++)
+                                            a[e] = (2 * Math.random() - 1) * Math.pow(1 - e / a.length, 3);
+                                        const r = t.createBufferSource()
+                                          , i = t.createGain();
+                                        r.buffer = n,
+                                        i.gain.value = .2 + .6 * e,
+                                        r.connect(i),
+                                        i.connect(o),
+                                        r.start(),
+                                        r.onended = () => {
+                                            try {
+                                                r.disconnect(),
+                                                i.disconnect()
+                                            } catch (e) {}
+                                        }
+                                    }
+                                    , 45);
+                                    tt = {
+                                        ac: t,
+                                        source: i,
+                                        howl: d,
+                                        trem: f,
+                                        crackleTimer: p
+                                    }
+                                } catch (e) {}
+                            }(),
+                            ut(performance.now()),
+                            nt = window.setTimeout( () => {
+                                nt = null,
+                                Je && dt()
+                            }
+                            , 5e3)));
+                        if ("s09" === i && !b)
+                            return ve(),
+                            void (ht || m || b || (ht = !0,
+                            Ue(),
+                            n.value = "",
+                            n.blur(),
+                            u = "u42",
+                            f = !1,
+                            d = 0,
+                            h = 0,
+                            J(),
+                            window.setTimeout( () => {
+                                ht && (document.body.classList.add("u13"),
+                                window.setTimeout( () => document.body.classList.add("u12"), 180),
+                                window.setTimeout(ft, 3e3))
+                            }
+                            , 1050)));
+                        if ("s10" === i && Array.isArray(v.rows) && v.rows.every(e => "string" == typeof e))
+                            return t("u1").setAttribute("aria-label", v.ui?.label || ""),
+                            ve(),
+                            e = v.rows,
+                            m = !0,
+                            c.hidden = !1,
+                            n.value = "",
+                            l.classList.add("u27"),
+                            function() {
+                                const n = t("u1")
+                                  , o = n.getContext("2d")
+                                  , a = n.width / 29;
+                                o.clearRect(0, 0, n.width, n.height),
+                                o.textAlign = "center",
+                                o.textBaseline = "middle",
+                                o.fillStyle = "#ede6d4",
+                                o.font = 'bold 14px "Courier New",monospace',
+                                e.forEach( (e, t) => [...e].forEach( (e, n) => o.fillText(e, (n + .5) * a, (t + .5) * a)))
+                            }(),
+                            void Ut();
+                        if ("s11" === i && "string" == typeof v.id && "string" == typeof v.url) {
+                            ve(),
+                            m = !0,
+                            t("entryScreen").hidden = !0;
+                            const e = t("u3")
+                              , n = t("u39")
+                              , o = t("u41");
+                            if (e.setAttribute("aria-label", v.ui?.label || ""),
+                            n.setAttribute("aria-label", v.ui?.label || ""),
+                            t("u40").textContent = v.ui?.ready || "",
+                            o.textContent = v.ui?.open || "",
+                            e.hidden = !1,
+                            Ue(),
+                            o.href = v.url,
+                            "http:" !== location.protocol && "https:" !== location.protocol)
+                                e.classList.add("local-file"),
+                                n.removeAttribute("src");
+                            else {
+                                e.classList.remove("local-file");
+                                const t = "https://www.youtube.com/embed/" + encodeURIComponent(v.id) + "?autoplay=1&mute=1&playsinline=1&controls=1&rel=0";
+                                n.src = t + (location.origin ? "&origin=" + encodeURIComponent(location.origin) : "")
+                            }
+                            return
+                        }
+                        return "s12" === i && b ? (ve(),
+                        t("u8").setAttribute("aria-label", v.ui?.label || ""),
+                        Z.src = "/api/asset/12-a",
+                        ee.src = "/api/asset/12-b",
+                        ie = !0,
+                        b = !1,
+                        m = !0,
+                        Ue(),
+                        t("entryScreen").hidden = !0,
+                        t("u8").hidden = !1,
+                        n.blur(),
+                        l.classList.add("u44"),
+                        ae(),
+                        se(),
+                        ke("center"),
+                        void fe()) : "s13" === i ? (ve(),
+                        kt(),
+                        b = !0,
+                        V.src = "/api/asset/13-a",
+                        B.src = "/api/asset/13-b",
+                        W.src = "/api/asset/13-c",
+                        a.classList.add("u2"),
+                        t("faceCanvas").width = 375,
+                        t("faceCanvas").height = z,
+                        u = "smile",
+                        Q("idle"),
+                        R(v.ui?.label || ""),
+                        n.value = "",
+                        n.focus({
+                            preventScroll: !0
+                        }),
+                        void J()) : void 0
+                    }
+                }),
+                o.addEventListener("submit", Jt),
+                n.addEventListener("keydown", e => {
+                    "Enter" !== e.key || e.isComposing || (e.preventDefault(),
+                    Jt())
+                }
+                ),
+                n.addEventListener("input", () => {
+                    !b && !m && n.value.length > 0 && Math.random() < .15 && me("surprised", 650)
+                }
+                ),
+                i.addEventListener("click", Ke),
+                window.addEventListener("keydown", e => {
+                    "Escape" === e.key && p && Ke()
+                }
+                ),
+                R("М.И."),
+                J(),
+                He(y),
+                Oe(),
+                requestAnimationFrame(function e(t) {
+                    if (Je && ut(t),
+                    ie)
+                        !function(e) {
+                            if (!ie)
+                                return;
+                            const t = re.last ? Math.min(.045, (e - re.last) / 1e3) : 0;
+                            if (re.last = e,
+                            re.active && !re.over && t > 0) {
+                                re.elapsed += t,
+                                re.distance += re.speed * t,
+                                re.score = Math.floor(re.distance / 12),
+                                re.best = Math.max(re.score, re.best),
+                                re.speed = Math.min(290, 168 + .25 * re.score),
+                                re.lift > 0 || re.vy > 0 ? (re.jumpTime += t,
+                                re.lift += re.vy * t,
+                                re.vy -= 1620 * t,
+                                re.lift <= 0 && (re.lift = 0,
+                                re.vy = 0,
+                                re.jumpTime = 0)) : re.jumpTime = 0,
+                                re.spawn -= t,
+                                re.spawn <= 0 && function() {
+                                    const e = Math.floor(3 * Math.random())
+                                      , t = Math.random() < .2 ? 4 : 3
+                                      , n = ce[e]
+                                      , o = Math.round(n[0].length * t)
+                                      , a = Math.round(n.length * t);
+                                    re.u43.push({
+                                        x: oe + 8,
+                                        y: 374 - a + 2,
+                                        w: o,
+                                        h: a,
+                                        type: e,
+                                        scale: t
+                                    }),
+                                    re.spawn = Math.max(1.03, 1.55 - re.score / 1e3) + .38 * Math.random()
+                                }();
+                                for (const e of re.u43)
+                                    e.x -= re.speed * t;
+                                re.u43 = re.u43.filter(e => e.x + e.w > -10);
+                                const e = 36
+                                  , n = 256 - re.lift
+                                  , o = e + 16
+                                  , a = e + 60
+                                  , r = n + 12
+                                  , i = n + 112;
+                                for (const e of re.u43) {
+                                    const t = e.x + 5
+                                      , n = e.x + e.w - 5
+                                      , c = e.y + 4
+                                      , l = e.y + e.h - 2;
+                                    if (a > t && o < n && i > c && r < l) {
+                                        re.active = !1,
+                                        re.over = !0,
+                                        ue("hit");
+                                        break
+                                    }
+                                }
+                            }
+                            fe()
+                        }(t);
+                    else if (x) {
+                        const e = Math.floor(t / 140) % 4;
+                        e !== T && (T = e,
+                        J())
+                    } else
+                        b && !m && !p && t - M > 90 && (M = t,
+                        J());
+                    requestAnimationFrame(e)
+                })
+            }
+            )()
+        </script>
+        <script src="assets/a01.js" defer="defer"></script>
+        <script src="assets/a02.js" defer="defer"></script>
+        <script src="assets/a03.js" defer="defer"></script>
+        <script src="assets/a04.js" defer="defer"></script>
+    </body>
+</html>
+
+--------------------------------------------------------------------
+2. ФРАГМЕНТ CSS-СТИЛЕЙ
+--------------------------------------------------------------------
+.entry input {
+                font-family: "Courier New","Liberation Mono",monospace;
+                text-align: left;
+                font-size: clamp(20px,3vw,30px);
+                line-height: 1.1;
+                letter-spacing: .03em;
+                font-weight: 900;
+                color: #fff8db;
+                -webkit-text-fill-color: #fff8db;
+                caret-color: #f6e5b7;
+                text-shadow: 1px 1px #080908,0 0 4px #e6d8a653;
+                padding: 8px 4px;
+                background: transparent;
+                width: 100%;
+                min-width: 0
+            }
+
+            .entry input::placeholder {
+                color: transparent
+            }
+
+            .panel-wood {
+                margin: 25px -7px 0;
+                padding: 11px 15px 17px;
+                border: 10px solid #462817;
+                border-top-color: #e0a76e;
+                border-left-color: #ae7348;
+                border-right-color: #452718;
+                border-bottom-color: #26150e;
+                background-image: var(--woodlit-tex);
+                background-size: 192px 192px;
+                box-shadow: inset 0 5px #d99a64,0 9px 0 #21130c
+            }
+
+            .controls {
+                padding: 17px 24px;
+                min-height: 138px;
+                gap: 19px;
+                border: 10px solid #41433d;
+                border-top-color: #a9a69b;
+                border-left-color: #8e8981;
+                border-right-color: #292d29;
+                border-bottom-color: #252923;
+                background-image: var(--metal-tex);
+                background-size: 192px 192px;
+                box-shadow: inset 0 5px #908980,inset 0 -5px #272c27,7px 7px #1d1813
+            }
+
+            .push-butto
+
+--------------------------------------------------------------------
+3. ШИФРОВАЛЬНАЯ СЕТКА (23 СТРОКИ)
+--------------------------------------------------------------------
+щьдмдкжщэсхиеаждчжнтбйгоюжочн
+всэхэчпжнымлтряьксдаиаэзяъряд
+ийжевюамяпцрхэаяянюэеслиыэмжл
+итдйжжьаьгчжшсюбпирпьчцмбищбж
+гытзмштощюживтпяэаиеплтвиммшч
+шошэжиоцбпифлзмглфэрпхэлсвяжр
+гвчйбзрсгарпчвэжлзопаьфжнзхгс
+нхэшсчявоьюоьрелмлсждячыпжров
+гшьдвбпжмэжбосбочатамфюдюлйхэ
+лтжчзэшбзяпипбсйгмсьхисяыбытс
+одпосдаоуаъчтурядяпарчхтижмоч
+иуоглеворэсрвяэязфэфбдмаюийэж
+зоярмчящцтяйипмтчэдивллжвясьы
+дзаэлрсьдмьбчвхювспяюьхэббжшю
+еяшилаурчпшшьэдазизмгвийсхддя
+ллмэвьыирбмлхфючгязсамалрмаго
+улезслмпянллсжрчреобэйтчвиигс
+зочлжткэлпишяебжюдьэжжбйьлгчх
+иштзвсдшбпитличтрюдюувоюяпэов
+бмакэтчняхспэдбвписряпьфыдяжч
+улнжчдриоьхтвлмчмявьсфдчцсоед
+аасулсмщныяйййфэсвчсрежщиецэп
+йкзяонлэхжлдпчиртпьщмрэатжаое
+
+--------------------------------------------------------------------
+4. ЗАШИФРОВАННЫЕ БЛОКИ («МАТРЁШКА»)
+--------------------------------------------------------------------
+--- Блок уровня [27] / [28] ---
+39FgHRsv7vvKNc4cZQBKbsFp7BMd9
+[27] You found the secret layer! Just kidding, they're all the same layer.
++~+-+#
+I8f8ZKYaaXkfr
+28 ROT13 twice is no encryption. Once is no encryption either.
+#=*
+rWjIzZTBf753uis/d/uW3oFIJgxDEcASS4QcRQPRFMvRfCfVAbGRmzO8oCPv1159q3Q0Uhx5m3h+dmkndV3+qJK/FZo6s/G7a+U9G8/LY1C//p+//5h3/49//qs//A9//ffZGf4gBFGS/xZI5dVmtsD6g3q6otIUKkf0HzZWQ64rlxm8qsumWPmgmW3bO2AszyU+haq3L+nirrzxkzblBLpS9h8Mey8nOsk1lW+/l/U0i18IKHcvuGR0KyZ1S3GF8NvvD/1FmCyose2+bLWb5AlB9QfntuShgqanYklPdg86CHcJ9IQFACEvs/M2iziqr8ivAu4zz2ExW9e0zkj+Y9XrCoYf8lFYYl8fo682/Dy9pMT9d4J3aJXeMcWs2muY64wF2+h2UjtDFKbcFPMiGj/g3eL6lARSHFLhe9ia9rIq0ri26Lx+iLJMhYuyC8/MAYeQc58Hh/oyj2KW8tgO8+KMmf3e9uzDj+pc8hneTH0JS2bSx16V6Hkxnos0s4WbGEgtIn2Y6u4OhpnL8uOIahjsBRLRW7zeKA95kwLtl+xHLsB0DQaxnnz0L2Vtl+XyGkwFw6IZIjSk61ohm+3JkRKQb4R2Dx/p3Z8bNFBKGQ0KGXKVd51QYeQyfIyny7yuu5npCzC4QWLPCVa5WQY1bpjRVMh+x/TOFqhqkNvgh9KpZK6R0atz455R7voXFHaQogQFdldyGxoQRhchOT23c19E6Z1mouH1hQdSJY1vkhyozjkJtc3ub8iad2Yh8S63vleFIIurWmk1jW0Ss2VmAYfbek9WXI+Rxybi+8IlUfdPw2UcGid+U0AJ9KRiuoaIpmF4XiMAYGDAYTfrRrKpnpaPaQwN1qRPhJuYXSzaIgv02ijcWX2GzdxdXINo8rytZCZVZ2zfh98Dtv32cbsxoySNh7rIPh57aBGto4HVUB+ZYd63fUDMgCG2AaWmEE3Rj9xYF97br61RY68n0gCvGEr77N2tNVx+AnUsXHz7GDmKAvdzqeoA2mYpFqc5T8tlLKKyvhMyTCzApaxjzEeswUiWlapiC9ICeRNK5lhknwVSbZwwUZdhsJi5XmBvLiMbRfM/AvQXrCKIHYvPqe+vW5VHnFqnsbCJwTWji4WEs8x/G0iYqb5WUaW+KbnnBzfnjopojq0YnSdF0IwuAHVIcbd4KBW2oxFzQv/H0SwYDDm5IDUUHs9Nzm8uTXsaxdyig5Xw7ogGxu8Qx6seR4iNfC2S5CGdNClK18u4dU9AAy82dz6E1/l6xwXOmEl2ExaL+lUiwtobYfcqX7HQn3RCrLdx7y5o5ilaI1Z7qvdk8+yg3p+JA9wFQfx2CfKY53IT0b8lztaNsbFVHJQnuoCesXuiedt3xkUg2v9CSafn++Dq42zO3xzwroCu6JZMd3H+aSivzHU3aMfurRDghnhEFBagA9zzhJvIyVMif91up9w/uRZpvW7hEOTpVvMoEsBGYRjoTIpM1xQZSqqQp3CQitwKdgYgqae302nYTJ1g+vR9gIBgBl9+hgBL8euC2nWcbRpEYXKM3a2ZNQJGjh5vwnivwO4Vd6d5pSJF04gN0VM62xt56EOWCdC9k6hqixCi2xYrMYeLxB6ayjU80zL6xBmCoonOY1tSfEIO6S13hvqQjeqYhSXLP4JxAM0rwwwf/6QAGTqyIGqG/uQeyOU95lVl1lmY/eUtqCaYurIJ6jFjHxK1X8h0wP27hSLBpr4Xmnh7TFpTOJ6vAw+EbenmIo6jDMCbmL9UhEReG2/N62VZF9LMR2/CgWSYKR6I8hzEwW1UYN7vqG5SWa1ciW0p4ykuS7dFw0heuQCZq3llMUGsZfrO6hRRAR0OGOnB+H0H00AaYuH0Q8XOs4D+O8JAZybTgxjiF0+IKJJhYY4cqejfEe7IFALDGj/jUYt8igcFTfTnDAyzpRw+6dV5RynajfuuLrl6gr4Dbnzmt6f1IoJv6iml1NonyQTiPgg/VphuxG5AMmi9ifqhqDJ5i+UfY/z+QiCcTsovEiYtQvOhRH1EEXptExppf/1I+CX4yqHjS9FGL3KqJdzKKW4Fzc6rg/2UgPFpZ+nSMhc1lJ9Tpm9R8qIb6fHQ86WPaYnp+d7gywyKgsPdj8YHBJb7hjkdP9UrmUnnWRkCCHw7gez/tSAm7dtdFHytEiSDgD6pAlBmP1p3BC7j3DwKFUsZrN4FkxTu2GrgrvsSyQ3k3Ot/CporfGH5bPE/KPFDdjXmWzk3zuT7kDl7cntPoDSQ381kVI/Rx7iDTC89BYxINvar7roP8H3UclFi329oCD3obJwg+BkKcJCUKJG+3TYCQKR5OFE330fzerwG3JomJ1jLo9C8dvvsqE4UMcPwXownvaEZEirk+HL6Z+203nqPckXT3IIduFD3WjYTP3glI/7RcnR/QaRT7VbHb6KO00plfzOo5sCcl85zR9it6Agu3kbwWm0Rb7G0nBvw3InSD59wnIGeyi3ULitWyeBiEczQWFr3BzT0RvUHKyEHM2r5SX27JGAEbsav1w9AFO/g0cbwQCimIyGiECApzX92TogQCTPMDQ0GoJFZ5PWTZfYLCrF99hKVumvw3jQ8NWDmr6+mrUFokABLeAKEtXaQLfonkgsVOf1JhZkF9rUj9X0No7ntc4DqCHTe+f0zUae5XFamWulpo1nrP5L3f08+RyMAvnTGL/KO2xN4abeAFPKKqR7lnaOr7byuHbou0JQhEob7Tp+g8JP+IqMWE+Huft3RTs0ydQz9VprYeEpWGJxUbtKsGtaAxEv7b825Fae1F4LmgfI0IUd7RFeQTZjvuidx++4Pt/hElClRHX0Xs52JwViVBXGLOVFcU0Y5ToEoMpT8MZNn/X4vL3HEj3za9rAz8mBFHCJua/clmK0btvLk3sQPs7P0/AsygLyKrymlPuge7tQI2+Oc0exGdavpgxC9VsFsaGSTvdVXSb9HrcHiNA65xpZZXymlhay6toYZTKasH2YFHsJGPlTLUMhBFG77QfhQtiDxzTducCsDjknTBHvXYIP5jISEF4JRi2uNPeyBw2z9goGJsspqj/4tBrsTRhaXgSLyepE63VUqYlWmW1iZgmvoYj6cCTGGX7nh0IFJEgAi109b1zepJcxgRTQYiv6RdIB45xSHFd5MXg7Nm5P5sBaAyzuFhMo/kwEgopR/cUUaHXhTySCjjgCY2s3AeAYnjvzO9d1u8uXlgN3AIlg9rxtT+G2whvZ6ikyZMBGIFt8OQaA3NWDl1Md7X4Wf9vfDfNgvYbZbF8IT+EQa6EzT7MVjvrqp6tG2dJhAzmAcSIEg0dp/T6erPu4aH05goVCJjr4dpYeVaOlwaiqvBTCV65d080yDb6Ig0TnQw7OASFxdC+7InqB5c+57D8QjmrW8N3I7f8+qhqHg6LzJYIlFVsMw2TfkfAifx5pp3GHfqesMAhpScz8P2SZ8/EJSPvC+MlrX6xxDPdEAa3+9rVTdHyNqcnshbM16ZyVWJrb24WKt7uU1EVG3rtuksA2Nf9zaIWMhSVlLuRzufpdOcLIv8FHrGFCE2H/b1ctu3+aOUrFnCfBPszgiZubLzdzpx5HvJ9E6J2dsrX6PainPxKgP3DjQQuCnjJmHjj1sc1O3oolF5p1bd3c6am2Oy5m7uyTnwUVJuKFhnUcO5FZfaLokTTlNCWBMKKFbEGkH3jhswb7IBxEIR68dPY3zfrGvWyQm8sX762lWRS7nXx/uMIHsp6zRT1Y117hKaXrEE38Hqk+zA4VH1qz00l/OnoScwuCGmMgIyI3GK9WhawTvsJidJ0nkf4GT/qqSnBCCztvAMYa4QdEAKpEydnP+WpI5E0cctqCs90eoMGPqbHqCTCbqzhxXTqzJiNdwHgRAIE9z5C1z6qfLrtyA9sRTuv3ab2VdPU3mqc56v5l3NzucqBjee84wMYQkmWDZkSr2BfE4Btc0iuQsKI8rO2a33YGDuU/3vp4a4UmFBr0vw/z2IXSy1VitpoZyTI1O7jaHkzyd5ROz5jJYX3ue/CEozpb67LeMOj+bf4gAqjGgEjY7DNl4wTT/vDSieaupePL7nnbQDFdVJsIggDSSh8SyPbhf+4xMibwu6Zp53lznuac084lPmrxW2K4+WHnqazvs/KKNkVNKSDSsqU6YtWrjIy0VmtimGm/ZC6/FpxjltDjzI1zzsPiHAus4ZOfGncF+yBoCql8h8FtmgIosZhB/oiwPfh/PzZferB4wMiHLea/iimanaZtxz3wFT5lZJkCoEv9ZAKUWt9OKb83qLCI8sDBgbMmJBBp/0Vdq4AOfMMdTDB9E+rsv2eE7QldHaxTPHDcQfPB+MYbjDziloMQfjbXsR6oNVJxG2AsXA6iRlxJpeuSj8JmcYiM5FtcnxiYCIJCEmNIiygIVasTYTX4aDZVKhHmw4uB9GJb0m3qx2A3Z4WcyIUDm04gt84tTaucAiAzxzlgI9+4sjoBIL1WDnal5zcR0TdGLAZ+pad8Rco5QoyRrndCrrVW21DYDtYq3EWg3MAkmTJechXVx54ZdPL5YcHZhdqWqc8scAE/2O2KZSWMlWs30WgvgP+66YGBtCFYSK/ngwlQWm8RZ1IUegUPeCVQqs4qrfOPrK2YX/XtHvBG0UroUx875o+EWBJAbOKJoL8oRN9nJhldPOcTZO2dIB5zyBYS0O0ImVpHRG0FMnAx17BHH85ESHP1uHs3PHCpupl7uyFql42258rplQDKjU5VUG6aIV1z/0OBanIktO8nkym+IWUCM5ehKYrCGK7pTWAeRzflH6cdfIoPZdLzK/F7BmLBNdGn
+
+--- Блок Base64 (Lwn8qIijuf...) ---
+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
+
+--- Блок Base58 ---
+GMWRmqLFwiPuegQoHE5tQZAoKyqAVm9jePtGDaPBL6eNw43zb3NdhhTE8fT4mYM7wto4ekQAGW255FovdqcrrY9N9KWCEQVGCfNAzU7Ju7ayBPrborFRHYbCNsMibRRBDetXqot7fJKWgnNnNt3r9zs5oQdWXp66ug9AXGt9zrscxhB75rDRcBbUFBYn8zXKDfTKvhXnVEMK9fMxFnFiiAzRiX9Nh9yiYB6cowBt976ueVHgPDZ8rHA3xiimENveK7hCMXFPWwqVJ9H2oDvKYB8UjyQmPyFsrQ3RRN7737ZsvdX6GbuFAihMyn9N6X5UEWr8XwWoEa29fm7WpwHQywffoZ2SAVvtCgv28m5iF8gRTYa9oCCrrSSsXvB5NDziwV2bcvVdSUC2JqEzDa5B39z3jPiCci7pZtffLhzNM9yd9Mfj6V2cpp5tzHmNkDYawuxD97PvMwUZPLCiQyFwewtyUf225zx4NS4RDyAmXDj39FgHRsv7vvKNc4cZQBKbsFp7BMd9I8f8ZKYaaXkfrQPKBsLwBTfMC7bzozFeoN34Mt34mBWAVWk9wj4YwMhkQ6LW9ZNjVte63YtmruprEW8Y7AN9wfgtwEcQG7QRbWjv8MbXGENjKzeyZ5KKtGk7

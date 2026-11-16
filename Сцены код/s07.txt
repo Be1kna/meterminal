@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.MI_CORE;e&&document.addEventListener("mi:unlock",(n=>{"s07"!==(n.detail||{}).scene||e.busy()||(e.miRememberAction(),e.u42?(e.input.value="",e.run("greet")):e.say("Приветствую вас, пользователь"))}))})();
