@@ -1,0 +1,64 @@
+cap:
+0: [38, -19, 24, 2, "#606169"]
+1: [35, -17, 30, 3, "#494a51"]
+2: [34, -14, 32, 16, "#303238"]
+3: [35, -13, 4, 13, "#46474e"]
+4: [62, -13, 3, 13, "#202228"]
+5: [34, -2, 32, 3, "#4b4a50"]
+6: [30, 1, 40, 2, "#52535a"]
+7: [26, 3, 48, 3, "#282a30"]
+8: [29, 6, 42, 2, "#45464b"]
+rim: 
+0: [-5, -12, 10, 2]
+1: [-9, -10, 4, 2]
+2: [5, -10, 4, 2]
+3: [-11, -8, 2, 4]
+4: [9, -8, 2, 4]
+5: [-12, -4, 2, 8]
+6: [10, -4, 2, 8]
+7: [-11, 4, 2, 4]
+8: [9, 4, 2, 4]
+9: [-9, 8, 4, 2]
+10: [5, 8, 4, 2]
+11: [-5, 10, 10, 2]
+
+
+draw: function(ctx, offsetX, offsetY, mood) {
+  if (!e.u46 || ctx !== facectx) return;  // только в спец-режиме, только на face canvas
+
+  const fill = (x, y, w, h, color) => {
+    ctx.fillStyle = color;
+    ctx.fillRect(offsetX + Math.round(x), offsetY + Math.round(y), w, h);
+  };
+
+  const moodOffset = {
+    surprised: -3, heart: -2, grin: -1,
+    smile: 0, wink: 0,
+    skeptic: 1, sad: 2, angry: 2, u47: -3
+  }[mood] || 0;
+
+  for (const [x, y, w, h, color] of (t.s06?.cap || [])) {
+    fill(x, y + moodOffset, w, h, color);
+  }
+
+  if (mood !== "angry" && mood !== "u47") {
+    fill(19, 10, 20, 2, i.light);   // левая бровь
+    fill(61, 10, 20, 2, i.light);   // правая бровь
+  }
+
+  const canMove = !e.blink && mood !== "wink" && mood !== "u47";
+  const eyeLeftX = 28 + (canMove ? e.eyeX : 0);
+  const eyeTopY  = (mood === "u47" ? 28 : 24) + (canMove ? e.eyeY : 0);
+
+  for (const [x, y, w, h] of (t.s06?.rim || [])) {
+    fill(eyeLeftX + x, eyeTopY + y, w, h, "#d2a55c");
+  }
+
+  fill(eyeLeftX - 9, eyeTopY - 7, 2, 3, "#a7adb0");  // светлый блик
+  fill(eyeLeftX - 10, eyeTopY - 3, 2, 2, "#737d80"); // тень
+
+  //    в этом файле правый глаз НЕ рисуется — только левый
+  //    (видимо, rim уже содержит формы для обоих глаз)
+
+  ctx.fillStyle = i.light;  // восстановить цвет
+}
